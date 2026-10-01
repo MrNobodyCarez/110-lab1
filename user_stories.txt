@@ -1,0 +1,13 @@
+As a player, I want to buy supplies like cups, ice, lemons, and sugar so that I can make lemonade.
+
+As a player, I want to choose how many supplies to buy so that I can manage my money and prepare for the day.
+
+As a player, I want to know the weather each day so that I can decide how much lemonade to prepare.
+
+As a player, I want to sell lemonade during the day so that I can earn money from my lemonade stand.
+
+As a player, I want my supplies to decrease when I sell lemonade so that the game keeps track of my inventory.
+
+As a player, I want to see how many cups of lemonade I sold so that I can know how well my stand performed that day.
+
+As a player, I want to see my remaining supplies and cash balance at the end of each day so that I know how my lemonade stand is doing.
