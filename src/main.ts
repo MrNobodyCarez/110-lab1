@@ -50,7 +50,8 @@ async function main(): Promise<void> {
     } else {
         console.log("Not enough cash to buy the cups.");
     }
-    const cupsSold = stand.sellCups(5);
+    const cupsToSell = Number(await rl.question("How many cups do you want to sell? "));
+    const cupsSold = stand.sellCups(cupsToSell);
     console.log(`Cups sold: ${cupsSold}`);
     console.log(stand.getStatus());
     rl.close();
