@@ -31,9 +31,21 @@ async function main(): Promise<void> {
         output: stdout
     });
 
-    const answer = await rl.question("How many cups do you want to buy? ");
-
-    console.log(`You entered: ${answer}`);
+    const cups = Number(await rl.question("How many cups do you want to buy? "));
+    const purchaseSuccessful = stand.buySupplies(
+    cups,
+    0,
+    0,
+    0,
+    day.getCupPrice(),
+    0,
+    0,
+    0);
+    if (purchaseSuccessful) {
+        console.log(`Purchased ${cups} cups.`);
+    } else {
+        console.log("Not enough cash to buy the cups.");
+    }
 
     rl.close();
 }
