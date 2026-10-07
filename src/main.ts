@@ -52,6 +52,7 @@ async function main(): Promise<void> {
     }
     const cupsSold = stand.sellCups(5);
     console.log(`Cups sold: ${cupsSold}`);
+    console.log(stand.getStatus());
     rl.close();
 }
 

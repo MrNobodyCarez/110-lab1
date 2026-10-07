@@ -56,7 +56,7 @@ export class Stand {
         this.sugar -= this.sugarPerLemonade;
         return true;
     }
-    
+
     /**
      * 
      * Sells multiple cups of lemonade.
@@ -121,5 +121,14 @@ export class Stand {
         this.cash -= totalCost;
 
         return true;
+    }
+    
+    /**
+     * Returns the current inventory and cash balance.
+     * 
+     * @returns A description of the supplies and cash remaining.
+     */
+    getStatus(): string {
+        return `Supplies: ${this.cups} cups, ${this.ice} ice, ${this.lemons} lemons, ${this.sugar} sugar. Cash: $${this.cash.toFixed(2)}`;
     }
 }
