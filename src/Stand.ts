@@ -54,6 +54,7 @@ export class Stand {
         this.ice -= this.icePerLemonade;
         this.lemons -= this.lemonsPerLemonade;
         this.sugar -= this.sugarPerLemonade;
+        this.cash += 1.00;
         return true;
     }
 
@@ -122,7 +123,7 @@ export class Stand {
 
         return true;
     }
-    
+
     /**
      * Returns the current inventory and cash balance.
      * 
