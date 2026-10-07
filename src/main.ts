@@ -13,11 +13,11 @@ async function main(): Promise<void> {
     const stand = new Stand();
 
     const day = new Day(
-        85,
-        0.10,
-        0.05,
-        0.50,
-        0.20
+        Day.randomTemperature(),
+        Day.randomSupplyPrice(),
+        Day.randomSupplyPrice(),
+        Day.randomSupplyPrice(),
+        Day.randomSupplyPrice(),
     );
 
     console.log(`Today's temperature: ${day.getTemperature()}°F`);
@@ -50,7 +50,7 @@ async function main(): Promise<void> {
     } else {
         console.log("Not enough cash to buy the cups.");
     }
-    const cupsToSell = Number(await rl.question("How many cups do you want to sell? "));
+    const cupsToSell = Math.floor(day.getTemperature() / 10);
     const cupsSold = stand.sellCups(cupsToSell);
     console.log(`Cups sold: ${cupsSold}`);
     console.log(stand.getStatus());

@@ -70,4 +70,20 @@ export class Day {
     getSugarPrice(): number {
         return this.sugarPrice;
     }
+    /**
+     * Generates a random temperature for the day.
+     * 
+     * @returns A temperature between 60°F and 100°F.
+     */
+    static randomTemperature(): number {
+        return Math.floor(Math.random() * 41) + 60;
+    }
+    /**
+     * Generates a random supply price.
+     * 
+     * @returns A price between $0.05 and $0.50.
+     */
+    static randomSupplyPrice(): number {
+        return Math.floor(Math.random() * 46 + 5) / 100;
+    }
 }
