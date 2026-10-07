@@ -32,17 +32,21 @@ async function main(): Promise<void> {
     });
 
     const cups = Number(await rl.question("How many cups do you want to buy? "));
+    const ice = Number(await rl.question("How much ice do you want to buy? "));
+    const lemons = Number(await rl.question("How many lemons do you want to buy? "));
+    const sugar = Number(await rl.question("How much sugar do you want to buy? "));
+
     const purchaseSuccessful = stand.buySupplies(
     cups,
-    0,
-    0,
-    0,
+    ice,
+    lemons,
+    sugar,
     day.getCupPrice(),
-    0,
-    0,
-    0);
+    day.getIcePrice(),
+    day.getLemonPrice(),
+    day.getSugarPrice());
     if (purchaseSuccessful) {
-        console.log(`Purchased ${cups} cups.`);
+        console.log(`Purchased ${cups} cups, ${ice} ice, ${lemons} lemons, and ${sugar} sugar.`);
     } else {
         console.log("Not enough cash to buy the cups.");
     }
