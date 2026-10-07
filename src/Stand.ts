@@ -56,6 +56,25 @@ export class Stand {
         this.sugar -= this.sugarPerLemonade;
         return true;
     }
+    
+    /**
+     * 
+     * Sells multiple cups of lemonade.
+     * 
+     * The method keeps selling cups until the requested
+     * amount is reached or the stand runs out of supplies.
+     * 
+     * @param amount Number of cups the player wants to sell.
+     * @returns The number of cups that were actually sold.
+     */
+    sellCups(amount: number): number {
+        let cupsSold = 0;
+        while (cupsSold < amount && this.sellCup()) {
+            cupsSold++;
+        }
+        return cupsSold;
+    }
+
 
     /**
      * Buys supplies for the lemonade stand.

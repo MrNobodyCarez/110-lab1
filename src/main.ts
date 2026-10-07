@@ -50,7 +50,8 @@ async function main(): Promise<void> {
     } else {
         console.log("Not enough cash to buy the cups.");
     }
-
+    const cupsSold = stand.sellCups(5);
+    console.log(`Cups sold: ${cupsSold}`);
     rl.close();
 }
 
